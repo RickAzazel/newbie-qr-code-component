@@ -1,14 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
 *,
 ::after,
 ::before {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	font-family: Outfit, sans-serif;
+}
+
+:root {
+	/** ================== Colors ================== */
+	/* Background */
+	--wrapper-bg-color: rgb(214, 226, 240);
+	--qr-code-bg-color: white;
+
+	/* Font */
+	--title-font-color: rgb(31, 50, 81);
+	--text-font-color: rgb(123, 135, 157);
 }
 
 html {
 	font-size: 62.5%;
-	font-family: Outfit, sans-serif;
 }
 
 body {
@@ -20,8 +33,9 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	min-height: 550px;
 	padding: 40px 20px;
-	background-color: rgb(214, 226, 240);
+	background-color: var(--wrapper-bg-color);
 }
 
 .qr-code {
@@ -31,7 +45,7 @@ body {
 	height: 500px;
 	padding: 20px;
 	border-radius: 15px;
-	background-color: white;
+	background-color: var(--qr-code-bg-color);
 }
 
 .qr-code__image {
@@ -51,10 +65,10 @@ body {
 
 .title {
 	margin-bottom: 20px;
-	color: rgb(31, 50, 81);
+	color: var(--title-font-color);
 	font-size: 2.2rem;
 }
 
 .text {
-	color: rgb(123, 135, 157);
+	color: var(--text-font-color);
 }
